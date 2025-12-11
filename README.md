@@ -9,22 +9,29 @@ This project provides a comprehensive platform for forest reserve management, en
 ## 🚀 Features
 
 - Forest reserve data management
+- AI-powered chatbot for forest reserve queries
 - Interactive user interface
 - RESTful API backend
 - Responsive design
 - Real-time data updates
+- Natural language processing for user queries
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- JavaScript
-- CSS
-- HTML
+- React.js
+- JavaScript (ES6+)
+- CSS3
+- HTML5
 
 ### Backend
 - Node.js
-- Express.js (assumed based on typical JS backend)
+- Express.js
 - Database integration
+
+### AI/ML
+- Hugging Face Transformers
+- Natural Language Processing for chatbot functionality
 
 ## 📁 Project Structure
 
@@ -48,6 +55,7 @@ forest-reserve-act/
 - Node.js (v14 or higher)
 - npm or yarn
 - MongoDB/PostgreSQL (depending on your database choice)
+- Hugging Face API key (sign up at [huggingface.co](https://huggingface.co/))
 
 ### Backend Setup
 
@@ -72,6 +80,8 @@ npm install
 PORT=5000
 DATABASE_URL=your_database_url
 JWT_SECRET=your_jwt_secret
+HUGGINGFACE_API_KEY=your_huggingface_api_key
+HUGGINGFACE_MODEL=your_chosen_model_name
 ```
 
 5. Start the backend server:
@@ -96,9 +106,10 @@ npm install
 3. Create a `.env` file in the frontend directory:
 ```env
 REACT_APP_API_URL=http://localhost:5000
+REACT_APP_HUGGINGFACE_API_KEY=your_huggingface_api_key
 ```
 
-4. Start the development server:
+4. Start the React development server:
 ```bash
 npm start
 ```
@@ -110,7 +121,17 @@ The frontend application should now be running on `http://localhost:3000`
 1. Open your browser and navigate to `http://localhost:3000`
 2. Register/Login to access the application
 3. Browse and manage forest reserve data
-4. Use the dashboard to view statistics and information
+4. Use the AI chatbot to ask questions about forest reserves
+5. Get intelligent responses powered by Hugging Face models
+6. Use the dashboard to view statistics and information
+
+## 🤖 Chatbot Features
+
+The integrated AI chatbot uses Hugging Face models to provide:
+- Natural language understanding of forest-related queries
+- Intelligent responses about reserve information
+- Context-aware conversations
+- Quick answers to common questions about forests and reserves
 
 ## 🌐 API Endpoints
 
@@ -124,6 +145,10 @@ The frontend application should now be running on `http://localhost:3000`
 - `POST /api/reserves` - Create a new reserve
 - `PUT /api/reserves/:id` - Update a reserve
 - `DELETE /api/reserves/:id` - Delete a reserve
+
+### Chatbot
+- `POST /api/chatbot/query` - Send a query to the AI chatbot
+- `GET /api/chatbot/history` - Get conversation history
 
 ## 🤝 Contributing
 
@@ -158,15 +183,19 @@ npm run build
 
 ## 🐛 Known Issues
 
-- List any known issues here
+- List any known issues here(For contributers)
 
 ## 🔮 Future Enhancements
 
-- Mobile application
+- Mobile application (React Native)
+- Advanced chatbot capabilities with more Hugging Face models
+- Voice-based interaction with the chatbot
 - Advanced search and filtering
 - Data visualization and analytics
 - Export functionality (PDF, Excel)
-- Multi-language support
+- Multi-language support for chatbot
+- Offline chatbot mode
+- Image recognition for forest species identification
 
 ## 📄 License
 
